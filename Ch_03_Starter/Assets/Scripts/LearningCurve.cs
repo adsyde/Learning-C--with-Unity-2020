@@ -16,12 +16,20 @@ public class LearningCurve : MonoBehaviour
     void Start()
     {
         ComputeAge();
+        int playerLevel = 32;
+        string playerName = "Goga";
+        GenerateCharacter(playerName, playerLevel);
+        int nextSkillLever = GenerateCharacter(playerName, playerLevel);
+        Debug.Log(nextSkillLever);
+        Debug.Log(GenerateCharacter(playerName, playerLevel));
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public int GenerateCharacter(string name, int level)
     {
-
+        //Debug.Log("Character: Spike");
+        //Debug.LogFormat("Characeter: {0} - Level: {1}", name, level);
+        return level + 5;
     }
 
     /// <summary>
@@ -29,6 +37,7 @@ public class LearningCurve : MonoBehaviour
     /// </summary>
     void ComputeAge()
     {
-        Debug.Log(currentAge + addedAge);
+        Debug.Log($"A string can have variables like {firstName} inserted directly");
+        //Debug.Log(firstName * pi);
     }
 }
